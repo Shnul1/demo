@@ -1,0 +1,50 @@
+.notificate-content{
+    width: 354px;
+    height: 100px;
+    position: relative;
+    line-height: 1.5715;
+    padding: 16px 24px;
+    box-shadow: 0 3px 6px -4px rgba(0,0,0,.32), 0 6px 16px 0 rgba(0,0,0,.08), 0 9px 28px 8px rgba(0,0,0,.05);
+    border-radius: 2px;
+    margin-bottom: 16px;
+    margin-left: auto;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.notificate-close{
+    width: 35px;
+    height: 35px;
+    font-size: 35px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 10;
+    padding: 0;
+    color: rgba(0,0,0,.45);
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    background: 0 0;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.notificate-header{
+    margin-bottom: 8px;
+    color: rgba(0,0,0,.85);
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.notificate-title{
+    font-size: 16px;
+}
+
+.notificate-body{
+    color: rgba(0,0,0,.85);
+    font-family: -apple-system;
+    font-size: 14px;
+}
+
