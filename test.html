@@ -9,12 +9,21 @@
     <script type="text/javascript" src="component/component_js/notification.js"></script>
     <title>Test</title>
     <style>
+    .btn{
+        background-color: beige;
+    }
+
+    .btn:hover{
+        cursor: pointer;
+    }
+    
     .btn1{
         position: fixed;
         top: 10px;
         width: 60px;
-        height: 20px;
-        line-height: 20px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
     }
 
     .btn2{
@@ -22,13 +31,16 @@
         top: 10px;
         left: 100px;
         width: 60px;
-        height: 20px;
-        line-height: 20px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
     }
+
+
     </style>
 </head>
 <body>
-    <div class="btn1" onclick="showModal('对话框')">对话框</div>
-    <div class="btn2" onclick="notificateMsg('提示框')">提示框</div>
+    <div class="btn btn1" onclick="showModal('对话框')">对话框</div>
+    <div class="btn btn2" onclick="notificateMsg('提示框')">提示框</div>
 </body>
 </html>

@@ -1,6 +1,9 @@
 function notificateMsg(data){
     createNode();
-
+    setInterval(function(){
+        let notificationNums = document.getElementsByClassName('notificate-content');
+        document.body.removeChild(notificationNums[0]);
+    }, 4500)
     function createNode(){
         //最外层内容div
         let content = document.createElement('div');
