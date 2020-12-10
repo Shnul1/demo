@@ -21,5 +21,6 @@ function pop(data){
     arrow.appendChild(arrowContent);
     inner.appendChild(span);
     
+    
 }
 
