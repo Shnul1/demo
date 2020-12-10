@@ -5,8 +5,10 @@
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="component/component_css/modal.css">
     <link rel="stylesheet" href="component/component_css/notification.css">
+    <link rel="stylesheet" href="component/component_css/select.css">
     <script type="text/javascript" src="component/component_js/modal.js"></script>
     <script type="text/javascript" src="component/component_js/notification.js"></script>
+    <script type="text/javascript" src="component/component_js/select.js"></script>
     <title>Test</title>
     <style>
     .btn{
@@ -42,5 +44,14 @@
 <body>
     <div class="btn btn1" onclick="showModal('对话框')">对话框</div>
     <div class="btn btn2" onclick="notificateMsg('提示框')">提示框</div>
+
+    <!-- <div class="menu-selector">
+        <span class="menu-selector-search"></span>
+        <span class="menu-selector-item"></span>
+        <span class="menu-selector-arrow">
+            <img class="selector-arrow-img" src="image/下拉箭头.png" alt="下拉箭头">
+        </span>
+    </div> -->
+    <div class="name-menu" onload="selectMenu('Lucy', 'Jack', 'Monkey')">11111</div>
 </body>
 </html>

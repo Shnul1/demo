@@ -1,0 +1,56 @@
+.poptip-left{
+    padding-right: 8px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0,0,0,.85);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: "tnum";
+    position: absolute;
+    z-index: 1070;
+    display: block;
+    max-width: 250px;
+}
+
+.poptop-arrow{
+    bottom: 5px;
+    position: absolute;
+    right: -5.07106781px;
+    display: block;
+    width: 13.07106781px;
+    height: 13.07106781px;
+    overflow: hidden;
+    background: 0 0;
+    pointer-events: none;
+}
+
+.poptip-arrow-content{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 5px;
+    height: 5px;
+    margin: auto;
+    background-color: rgba(0,0,0,.75);
+    content: "";
+    pointer-events: auto;
+    box-shadow: 3px -3px 7px rgba(0,0,0,.07);
+}
+
+.poptip-inner{
+    min-width: 30px;
+    min-height: 32px;
+    padding: 6px 8px;
+    color: #fff;
+    text-align: left;
+    text-decoration: none;
+    background-color: rgba(0,0,0,.75);
+    border-radius: 2px;
+    box-shadow: 0 3px 6px -4px rgba(0,0,0,.12), 0 6px 16px 0 rgba(0,0,0,.08), 0 9px 28px 8px rgba(0,0,0,.05);
+}

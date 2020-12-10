@@ -1,0 +1,58 @@
+.name-menu{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0,0,0,.85);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: "tnum";
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.menu-selector{
+    width: 120px;
+    height: 32px;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    transition: all .3s cubic-bezier(.645,.045,.355,1);
+}
+
+.menu-selector-search{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    bottom: 0;
+    left: 11px;
+}
+
+.menu-selector-item{
+    position: relative;
+    user-select: none;
+}
+
+.menu-selector-arrow{
+    font-size: 12px;
+    display: inline-block;
+    text-transform: none;
+    position: absolute;
+    top: 50%;
+    right: 11px;
+    width: 12px;
+    height: 12px;
+    margin-top: -6px;
+    color: rgba(0,0,0,.25);
+    line-height: 1;
+    text-align: center;
+    pointer-events: none;
+}
+
+.selector-arrow-img{
+    width: 12px;
+    height: 12px;
+}
