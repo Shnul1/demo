@@ -1,6 +1,6 @@
 function notificateMsg(data){
     createNode();
-    setInterval(function(){
+    setTimeout(function(){
         let notificationNums = document.getElementsByClassName('notificate-content');
         document.body.removeChild(notificationNums[0]);
     }, 4500)
