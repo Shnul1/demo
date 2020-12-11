@@ -22,3 +22,4 @@ function pop(data){
     inner.appendChild(span);
     
 }
+
