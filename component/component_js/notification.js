@@ -47,10 +47,3 @@ function notificateMsg(data){
         }
     }
 }
-
-
-// function autoClose(){
-//     setTimeout(function(){
-        
-//     }, 4500);
-// }

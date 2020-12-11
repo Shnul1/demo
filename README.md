@@ -119,5 +119,161 @@ window.onload = function(){
 
 弹出层学习：
 
+对话框是用了JS实现的方法封装了一下，实现了类似完整的组件的方法：
+
+JS代码：
+
+```javascript
+function showModal(data){
+    //最外层内容div
+    let content = document.createElement('div');
+    content.setAttribute('class', 'modal-content');
+    
+    //关闭按钮
+    let btn = document.createElement('button');
+    btn.setAttribute('class', 'modal-close');
+    btn.innerHTML = '×';
+    
+    //标题头
+    let header = document.createElement('div');
+    header.setAttribute('class', 'modal-header');
+    let title = document.createElement('div');
+    title.setAttribute('class', 'modal-title');
+    title.innerHTML = '对话框';
+
+    //涵盖提示文字div
+    let modalbody = document.createElement('div');
+    modalbody.setAttribute('class', 'modal-body');
+    //提示的文字
+    let p = document.createElement('p');
+    textNode = document.createTextNode(data);
+
+    //存放按钮底部
+    let footer = document.createElement('div');
+    footer.setAttribute('class', 'modal-footer');
+    //确认按钮
+    let btncfm = document.createElement('button');
+    btncfm.setAttribute('class', 'btn-primary');
+    btncfm.innerHTML = '确认';
+
+    //遮罩层
+    let wrap = document.createElement('div');
+    wrap.setAttribute('class', 'modal-wrap');
+
+    p.appendChild(textNode);
+    footer.appendChild(btncfm);
+    modalbody.appendChild(p);
+    header.appendChild(title);
+    content.appendChild(header);
+    content.appendChild(btn);
+    content.appendChild(modalbody);
+    content.appendChild(footer);
+    document.body.appendChild(wrap);
+    document.body.appendChild(content);
+
+    btn.onclick = function(){
+    document.body.removeChild(content);
+    document.body.removeChild(wrap);
+    }
+
+    btncfm.onclick = function(){
+    document.body.removeChild(content);
+    document.body.removeChild(wrap);
+    }
+}
+```
+
+CSS代码：
+
+```css
+.modal-content{
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    width: 420px;
+    height: 200px;
+    z-index: 10;
+    transition: all .3s;
+    background: #fff;
+    /* box-shadow: 0 0 10px #eee; */
+    font-size: 10px;
+    transform: translateX(-50%);
+}
+
+
+.modal-header{
+    padding: 16px 24px;
+    color: rgba(0,0,0,.85);
+    font-size: 14px;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 2px 2px 0 0;
+}
+
+.modal-close{
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    padding: 0;
+    color: rgba(0,0,0,.45);
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    background: 0 0;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.modal-body{
+    padding: 24px;
+    font-size: 14px;
+    line-height: 1.5715;
+}
+
+.modal-footer{
+    padding: 10px 16px;
+    text-align: right;
+    background: 0 0;
+    border-top: 1px solid #f0f0f0;
+    border-radius: 0 0 2px 2px;
+}
+
+.btn-primary{
+    position: absolute;
+    outline: 0;
+    width: 56px;
+    height: 32px;
+    line-height: 1.5715;
+    color: #fff;
+    background: #1890ff;
+    border-color: #1890ff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.12);
+    box-shadow: 0 0.5px 0 rgba(0,0,0,.015);
+    border-radius: 5px;
+    bottom: 20px;
+    right: 20px;
+}
+
+.modal-wrap{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: all .3s;
+}
+```
+
+在使用时，只要将css和js引入，就可以在任意div或者元素上添加对话框。
+
 消息提示框和对话框的区别在于，消息提示框是一个浮动的元素，没有遮盖层，不会对后续用户的交互有中断影响，提示消息后，用户仍可以做当前正在做的事情或者之后要做的事情。而对话框是一个有中断效果的交互框，z-index层下还有一层遮罩层，如果只看对话框的模块，z-index层分为三层，块级元素层-遮罩层-对话框层，遮罩层将html页面的其他元素遮盖，用户只能对对话框进行操作，将对话框关闭或者确认对话框后，才能消除中断，继续之后的网页交互。
+
+
 

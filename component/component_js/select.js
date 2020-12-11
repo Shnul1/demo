@@ -28,7 +28,6 @@ function selectMenu(arrry){
 
     let nameMenu = document.getElementsByClassName('name-menu');
     
-    
     selectorArrow.appendChild(arrowImg);
     selector.appendChild(selectorArrow);
     nameMenu.appendChild(selector);
