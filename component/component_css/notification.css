@@ -12,6 +12,7 @@
 .notificate-content{
     width: 354px;
     height: 100px;
+    background-color: white;
     /* position: relative; */
     line-height: 1.5715;
     padding: 16px 24px;
