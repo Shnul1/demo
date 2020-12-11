@@ -1,0 +1,26 @@
+.flex{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.header{
+    width: 100px;
+    height:100%;
+    background: #6cf;
+}
+
+.main{
+    margin-right: 200px;
+    width: 100%; 
+    height: 100%;
+    background: #ccffff;
+}
+.footer{
+    position: fixed;
+    right: 0;
+    width: 200px;
+    height:100%;
+    background: #99ccff;
+}
