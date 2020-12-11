@@ -1,10 +1,12 @@
 function notificateMsg(data){
+    let container;
     createNode();
     setTimeout(function(){
         let notificationNums = document.getElementsByClassName('notificate-content');
-        document.body.removeChild(notificationNums[0]);
+        container[0].removeChild(notificationNums[0]);
     }, 4500)
     function createNode(){
+        container = document.getElementsByClassName('container-notification');
         //最外层内容div
         let content = document.createElement('div');
         content.setAttribute('class', 'notificate-content');
@@ -27,20 +29,20 @@ function notificateMsg(data){
         //提示的文字
         let p = document.createElement('p');
         textNode = document.createTextNode(data);
-    
+        
         p.appendChild(textNode);
         notificatebody.appendChild(p);
         header.appendChild(title);
         content.appendChild(header);
         content.appendChild(btn);
         content.appendChild(notificatebody);
-        document.body.appendChild(content);
+        container[0].appendChild(content);
 
         let btnNums = document.getElementsByClassName('notificate-close');
         let notificationNums = document.getElementsByClassName('notificate-content');
         for(let i=0; i<notificationNums.length; i++){
             btnNums[i].onclick = function (){
-                document.body.removeChild(notificationNums[i]);
+                container[0].removeChild(notificationNums[i]);
             }
         }
     }

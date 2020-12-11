@@ -9,6 +9,7 @@
     <script type="text/javascript" src="component/component_js/modal.js"></script>
     <script type="text/javascript" src="component/component_js/notification.js"></script>
     <script type="text/javascript" src="component/component_js/select.js"></script>
+    <link rel="stylesheet" href="component/component_css/repop.css">
     <title>Test</title>
     <style>
     .btn{
@@ -44,7 +45,7 @@
 <body>
     <div class="btn btn1" onclick="showModal('对话框')">对话框</div>
     <div class="btn btn2" onclick="notificateMsg('提示框')">提示框</div>
-
+    <div class="container-notification"></div>
     <!-- <div class="menu-selector">
         <span class="menu-selector-search"></span>
         <span class="menu-selector-item"></span>
@@ -53,5 +54,40 @@
         </span>
     </div> -->
     <div class="name-menu" onload="selectMenu('Lucy', 'Jack', 'Monkey')">11111</div>
+    <div class="nav">
+		<ul>
+			<li>
+				<a href="#" class="tooltip tooltip-effect-1">Home
+				   <span class="tooltip-content">
+				   </span>
+			    </a>
+			</li>
+			<li>
+				<a href="#" class="tooltip tooltip-effect-2">About me
+				   <span class="tooltip-content">
+				   </span>
+			    </a>
+			</li>
+			<li>
+				<a href="#" class="tooltip tooltip-effect-3">Photography
+				   <span class="tooltip-content">
+				   </span>
+			    </a>
+			</li>
+			<li>
+				<a href="#" class="tooltip tooltip-effect-4">Work
+				   <span class="tooltip-content">
+				   </span>
+			    </a>
+			</li>
+			<li>
+				<a href="#" class="tooltip tooltip-effect-5">Contact
+				   <span class="tooltip-content">
+				   </span>
+			    </a>
+			</li>			
+		</ul>
+	</div>
+
 </body>
 </html>
